@@ -1,0 +1,73 @@
+--------------------------LOGIN--------------------------------
+LOGIN NORMAL
+load predictcovid -> https://predictcovid.com.br/
+click acesse ->  document.querySelector("a[href='/home/']").click()
+load Login -> https://predictcovid.com.br/users/login/?next=/home/
+input email -> document.getElementById("email").value()
+input password -> document.getElementById("password").value()
+click Login ->document.getElementById("btnLogin").click()
+load home ->document.querySelector("a[href='/prediction/nova-analise/']")
+
+LOGIN EMAIL ERRADO
+input email
+input password
+alerta
+close
+
+LOGIN SENHA ERRADA
+input email
+input password
+alerta
+close
+
+LOGIN SEM EMAIL
+input password
+click LOGIN
+alerta campo obrigatorio
+close
+
+LOGIN SEM SENHA
+input email
+click login
+alerta campo obrigatorio
+close
+
+LOGIN SEM EMAIL E SENHA
+click login
+alerta campo obrigatorio
+close
+
+LOGIN MAS NÃO CADASTRADO
+load login -> https://predictcovid.com.br/users/login/?next=/home/
+click NÃO POSSUI CADASTRO? CADASTRE-SE -> document.querySelector("a[href='/users/cadastrar/']").click()
+load cadastro -> document.getElementById("name")
+
+-------------------------- CADASTRO -----------------------------------
+ABRIR CADASTRO
+load predictcovid
+load cadastro
+close
+
+ABRIR LOGIN
+load cadastro
+click login
+load login
+close
+
+------------------------- FEEDBACK -----------------------------------------------
+FEEDBACK HOME - enviar
+load home
+click FEEDBACK
+load FEEDBACK
+input FEEDBACK
+click enviar
+load home page
+close
+
+FEEDBACK HOME - cancelar
+load home
+click FEEDBACK
+load FEEDBACK
+click CANCELAR 
+load home page
+close
